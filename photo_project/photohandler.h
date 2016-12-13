@@ -8,8 +8,9 @@ class PhotoHandler
 {
 public:
     PhotoHandler(QString i, QString d);
+    QString search_database(std::vector<QColor> db_pixels, QColor colors);
     QImage construct_mosaic();
-
+    std::vector<QColor> PhotoHandler::load_database();
 private:
     QString database;
     QString imageName;

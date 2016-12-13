@@ -3,6 +3,16 @@
 PhotoHandler::PhotoHandler(QString i, QString d): database(d), imageName(i) {}
 
 
+QString search_database(std::vector<QColor> db_pixels, QColor colors)
+{
+
+}
+
+std::vector<QColor> PhotoHandler::load_database()
+{
+
+}
+
 QImage construct_mosaic() {
     /*Basic algorithm outline
      *1. Get list of fileNames
