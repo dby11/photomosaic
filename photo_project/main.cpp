@@ -13,9 +13,5 @@ int main(int argc, char *argv[])
     QString test_directory = "C:/Users/Derek Y/Desktop/database/";
     */
 
-    PhotoHandler test(,test_directory);
-    QImage idea = test.construct_mosaic();
-    QString testmosaic = "C:/testing_pictures/cats.png";
-    idea.save(testmosaic);
     return a.exec();
 }

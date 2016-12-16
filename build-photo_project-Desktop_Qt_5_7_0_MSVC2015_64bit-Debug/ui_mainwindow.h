@@ -30,6 +30,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QPushButton *pushButton_3;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton;
@@ -50,6 +51,9 @@ public:
         MainWindow->resize(400, 300);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(280, 190, 93, 28));
         widget = new QWidget(centralWidget);
         widget->setObjectName(QStringLiteral("widget"));
         widget->setGeometry(QRect(20, 70, 95, 65));
@@ -110,6 +114,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "OK", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Image", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "Database", 0));
         menuPhotomosaic->setTitle(QApplication::translate("MainWindow", "Photomosaic", 0));
