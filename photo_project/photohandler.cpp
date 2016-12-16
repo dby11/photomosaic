@@ -9,6 +9,7 @@
 #include <QFileDialog>
 #include <QCoreApplication>
 
+
 double norm(QColor a, QColor b) {
     int red = a.red() - b.red();
     int blue = a.blue() - b.blue();
@@ -102,7 +103,7 @@ QImage PhotoHandler::construct_mosaic() {
 
     if (image.isNull())
     {
-        QString a = "cries";
+        QString a = "This is a null image";
         qDebug() << a;
     }
 
@@ -110,7 +111,7 @@ QImage PhotoHandler::construct_mosaic() {
     qDebug() << "height: " << image.height();
 
     std::vector<QColor> db_pixels = this->load_database();
-    qDebug() << "random red to show that this works:"<<db_pixels[13].red();
+    qDebug() << "Red from the middle of the database to show that this works:"<<db_pixels[13].red();
 
     QImage mosaic(size,QImage::Format_RGB32);
     mosaic.fill(0);
