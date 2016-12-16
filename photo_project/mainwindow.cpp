@@ -18,6 +18,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    //Currently only .png support
     QString filename = QFileDialog::getOpenFileName(this, tr("Open Image File"), "C://", "Image files (*.png)");
     ui->lineEdit->setText(filename);
 
@@ -25,6 +26,7 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    //User must choose a directory
     QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
     ui->lineEdit_2->setText(dir);
 }
@@ -36,6 +38,8 @@ void MainWindow::on_pushButton_3_clicked()
     PhotoHandler photo(fileName, directory);
 
     QImage mosaic = photo.construct_mosaic();
+
+    //Personal directory - will update with a "save location" button
     mosaic.save("C:/testing_pictures/mosaic.png");
 
 
