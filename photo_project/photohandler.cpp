@@ -9,7 +9,7 @@
 #include <QFileDialog>
 #include <QCoreApplication>
 
-
+//Returns the norm as a method of measuring how far away 2 QColors are
 double norm(QColor a, QColor b) {
     int red = a.red() - b.red();
     int blue = a.blue() - b.blue();
@@ -17,6 +17,7 @@ double norm(QColor a, QColor b) {
     return sqrt(red*red + blue*blue + green*green);
 }
 
+//Returns the average RGB data across a rectangular area of an image
 QColor avgpixel(QImage& img, int wstart, int wend, int hstart, int hend)
 {
     int total_red = 0;
@@ -42,8 +43,11 @@ QColor avgpixel(QImage& img, int wstart, int wend, int hstart, int hend)
     return avg_rgb;
 }
 
+//Constructor
 PhotoHandler::PhotoHandler(QString i, QString d): database(d), imageName(i) {}
 
+//Uses min_element algorithm and lambda function to iterate through the average QColor vector
+//And returns fileName associated with closest QColor
 QString PhotoHandler::search_database(std::vector<QColor> db_pixels, QColor colors)
 {
     auto closest = std::min_element(db_pixels.begin(), db_pixels.end(),
@@ -51,6 +55,8 @@ QString PhotoHandler::search_database(std::vector<QColor> db_pixels, QColor colo
     return fileNames[std::distance(db_pixels.begin(), closest)];
 }
 
+//Loads database that was initiated in PhotoHandler
+//Returns vector of avg QColors in database and saves vector of database fileNames as a member variable
 std::vector<QColor> PhotoHandler::load_database()
 {
     std::vector<QColor> v;
@@ -74,16 +80,17 @@ std::vector<QColor> PhotoHandler::load_database()
     return v;
 }
 
+/*Basic algorithm outline
+ *1. Get list of fileNames
+ *2. Find average RGB values for fileNames in database
+ *3. Read in image
+ *
+ *4. Get average RGB values for each subimage in the image
+ *5. Find best match within the photo database for each image based on avg RGB
+ *6. Assemble mosaic
+*/
 QImage PhotoHandler::construct_mosaic() {
-    /*Basic algorithm outline
-     *1. Get list of fileNames
-     *2. Find average RGB values for fileNames in database
-     *3. Read in image
-     *
-     *4. Get average RGB values for each subimage in the image
-     *5. Find best match within the photo database for each image based on avg RGB
-     *6. Assemble mosaic
-    */
+
     int scaled_width = 40;
     int scaled_height = 30;
 
