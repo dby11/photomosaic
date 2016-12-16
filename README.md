@@ -7,12 +7,11 @@ It uses C++11 standards and QT 5.7 compiler. Example database downloaded from Ar
 Example YouTube demo: https://youtu.be/-qD1BPQaKbg
 
 Known issues and next steps:
-	1. Algorithm improvement
-		1. Duplicate reduction
-	2. Some images in database are null
-	3. Support for image formats other than PNG
-	4. UI improvements
-		1. Unknown errors in QT output - doesn't impact program but worth investigating
+	<ul><li> Algorithm improvement and Duplicate reduction</li>
+	<li> Some images in database are null</li>
+	<li> Support for image formats other than PNG</li>
+	<li> UI improvements</li>
+	<li> Unknown errors in QT output - doesn't impact program but worth investigating</li></ul>
 
 Example database downloaded from Artensoft.com/ArtensoftPhotoMosaicWizard/photobases.php for personal use and demonstration of functionality.
 Done as a project by Derek Yen for PIC 10C Fall 2016.
