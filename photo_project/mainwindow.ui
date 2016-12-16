@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>190</y>
+      <y>200</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -27,47 +27,78 @@
      <string>OK</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>150</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>enter_output_filename.png</string>
+    </property>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>70</y>
-      <width>95</width>
-      <height>65</height>
+      <x>150</x>
+      <y>30</y>
+      <width>141</width>
+      <height>84</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Image</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>Database</string>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="lineEdit_3"/>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>80</y>
-      <width>139</width>
-      <height>53</height>
+      <x>20</x>
+      <y>20</y>
+      <width>120</width>
+      <height>102</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Image</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Database directory</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>Output directory</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
